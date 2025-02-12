@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futures P/L Calculator</title>
+    <title>Futures P/L & Liquidation Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Futures Trading P/L Calculator</h2>
+        <h2>Futures Trading Calculator</h2>
         <label>Entry Price:</label>
-        <input type="number" id="entryPrice" placeholder="Enter Entry Price">
-
+        <input type="number" id="entryPrice" placeholder="Enter entry price">
+        
         <label>Exit Price:</label>
-        <input type="number" id="exitPrice" placeholder="Enter Exit Price">
-
-        <label>Leverage (e.g., 10x):</label>
-        <input type="number" id="leverage" placeholder="Enter Leverage">
-
-        <label>Position Size (USD):</label>
-        <input type="number" id="positionSize" placeholder="Enter Position Size">
-
-        <button onclick="calculatePL()">Calculate P/L</button>
-
-        <h3 id="result"></h3>
+        <input type="number" id="exitPrice" placeholder="Enter exit price">
+        
+        <label>Leverage:</label>
+        <input type="number" id="leverage" placeholder="Enter leverage">
+        
+        <label>Margin (Initial Investment):</label>
+        <input type="number" id="margin" placeholder="Enter margin">
+        
+        <label>Trade Type:</label>
+        <select id="tradeType">
+            <option value="long">Long</option>
+            <option value="short">Short</option>
+        </select>
+        
+        <button onclick="calculatePL()">Calculate</button>
+        
+        <h3>Results:</h3>
+        <p id="profitLoss">Profit/Loss: </p>
+        <p id="liquidationPrice">Liquidation Price: </p>
     </div>
 
     <script src="script.js"></script>
