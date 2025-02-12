@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("button").addEventListener("click", calculatePL);
+});
+
 function calculatePL() {
     let entry = parseFloat(document.getElementById("entryPrice").value);
     let exit = parseFloat(document.getElementById("exitPrice").value);
